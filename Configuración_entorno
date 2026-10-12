@@ -74,6 +74,11 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
+Puedes comprobar las librerías instaladas con:
+
+```powershell
+python -m pip list
+```
 El archivo `requirements.txt` reúne las librerías declaradas para análisis de datos, modelado, seguimiento de experimentos, orquestación, API y pruebas.
 
 Si la instalación falla, conserva el mensaje completo del error y verifica que la terminal siga utilizando el intérprete dentro de `.venv`.
@@ -88,7 +93,21 @@ python -c "import numpy, pandas, scipy, sklearn, matplotlib, seaborn, mlflow, pr
 
 Si aparece el mensaje de confirmación, las dependencias listadas se pueden importar desde el entorno activo. Esta comprobación no reemplaza la ejecución de las pruebas ni garantiza que todos los módulos del proyecto funcionen.
 
-## 11. Actualizar el repositorio
+# 8. Datos y archivos del proyecto
+
+La descarga del conjunto de datos está incorporada directamente en el notebook .ipynb del proyecto. Por lo tanto, no es necesario descargar el dataset manualmente antes de comenzar.
+
+Para cargar los datos correctamente:
+
+1. Abre el notebook del proyecto en Visual Studio Code.
+
+2. Selecciona como kernel el entorno virtual .venv configurado previamente.
+
+3. Ejecuta las celdas en orden, comenzando por la celda que contiene el código de descarga del dataset.
+
+4. Verifica que la descarga y la lectura de los datos se completen correctamente antes de continuar con el análisis y el entrenamiento de los modelos.
+
+## 9. Actualizar el repositorio
 
 Para descargar los cambios más recientes:
 
