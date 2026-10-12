@@ -43,18 +43,18 @@ Plain Text
 # Arquitectura del Proyecto
 
 Datos
-── Ingesta
-── EDA
-── Feature Engineering
-── Train/Test Split
-── Modelos ML
-  ── Regresión Logística
-  ── Random Forest
-── MLflow
-── Prefect
-── FastAPI
-── Docker
-── Monitoreo
+|── Ingesta
+|── EDA
+|── Feature Engineering
+|── Train/Test Split
+|── Modelos ML
+  |── Regresión Logística
+  |── Random Forest
+|── MLflow
+|── Prefect
+|── FastAPI
+|── Docker
+|── Monitoreo
 
 # Tecnologías Utilizadas
 ## Ciencia de Datos
