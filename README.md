@@ -41,7 +41,9 @@ Plain Text
 0 = Sin riesgo de obesidad
 
 # Arquitectura del Proyecto
+## Arquitectura del Proyecto
 
+```text
 Datos
 |── Ingesta
 |
@@ -52,8 +54,9 @@ Datos
 |── Train/Test Split
 |
 |── Modelos ML
-  |── Regresión Logística
-  |── Random Forest
+|   |── Regresión Logística
+|   |── Random Forest
+|
 |── MLflow
 |
 |── Prefect
@@ -63,6 +66,7 @@ Datos
 |── Docker
 |
 |── Monitoreo
+```
 
 # Tecnologías Utilizadas
 ## Ciencia de Datos
