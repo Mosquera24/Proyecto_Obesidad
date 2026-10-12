@@ -1,1 +1,107 @@
+## 2. Requisitos
 
+Instala en Windows:
+
+- **Python 3.11.x** desde https://www.python.org/downloads/
+- **Git** desde https://git-scm.com/downloads
+- **Visual Studio Code** desde https://code.visualstudio.com/
+
+Durante la instalación de Python en Windows, activa la opción **Add python.exe to PATH** si aparece.
+
+En Visual Studio Code, instala estas extensiones:
+- **Python** (Microsoft)
+- **Pylance** (Microsoft)
+- **Jupyter** (Microsoft), solo si vas a ejecutar notebooks `.ipynb`
+
+## 3. Clonar el repositorio
+
+Abre PowerShell o una terminal en Visual Studio Code y ejecuta:
+
+```powershell
+git clone https://github.com/Mosquera24/Proyecto_Obesidad.git
+cd Proyecto_Obesidad
+code .
+```
+
+Si `code .` no se reconoce, abre Visual Studio Code manualmente y selecciona **Archivo > Abrir carpeta**, luego elige la carpeta `Proyecto_Obesidad`.
+
+## 4. Crear y activar el entorno virtual
+
+Desde la raíz del repositorio, ejecuta:
+
+```powershell
+py -3.11 -m venv .venv
+```
+
+Activa el entorno:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Si PowerShell bloquea la activación, abre una terminal **Command Prompt (CMD)** en VS Code y ejecuta:
+
+```cmd
+.venv\Scripts\activate.bat
+```
+
+Cuando el entorno esté activo, normalmente verás `(.venv)` al comienzo de la línea de la terminal.
+
+Comprueba que se está usando el Python del entorno:
+
+```powershell
+python --version
+python -c "import sys; print(sys.executable)"
+```
+
+La ruta que imprime el segundo comando debe terminar en `.venv\Scripts\python.exe`.
+
+## 5. Seleccionar el entorno en Visual Studio Code
+
+1. Presiona `Ctrl + Shift + P`.
+2. Escribe y selecciona `Python: Select Interpreter`.
+3. Selecciona el intérprete de este proyecto ubicado en `.venv\Scripts\python.exe`.
+4. Si trabajas con notebooks, abre el archivo `.ipynb`, selecciona **Select Kernel** y elige el mismo entorno `.venv`.
+
+Seleccionar el intérprete es importante: instalar paquetes en otro Python no los hace disponibles automáticamente en `.venv`.
+
+## 6. Instalar las dependencias
+
+Con el entorno virtual activado y desde la raíz del repositorio, ejecuta:
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+El archivo `requirements.txt` reúne las librerías declaradas para análisis de datos, modelado, seguimiento de experimentos, orquestación, API y pruebas.
+
+Si la instalación falla, conserva el mensaje completo del error y verifica que la terminal siga utilizando el intérprete dentro de `.venv`.
+
+## 7. Verificar la instalación
+
+Ejecuta:
+
+```powershell
+python -c "import numpy, pandas, scipy, sklearn, matplotlib, seaborn, mlflow, prefect, fastapi, uvicorn, pytest; print('Dependencias principales importadas correctamente')"
+```
+
+Si aparece el mensaje de confirmación, las dependencias listadas se pueden importar desde el entorno activo. Esta comprobación no reemplaza la ejecución de las pruebas ni garantiza que todos los módulos del proyecto funcionen.
+
+## 11. Actualizar el repositorio
+
+Para descargar los cambios más recientes:
+
+```powershell
+git pull
+```
+
+Si cambia `requirements.txt`, vuelve a instalar las dependencias:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+---
+
+Repositorio: https://github.com/Mosquera24/Proyecto_Obesidad
