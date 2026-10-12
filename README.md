@@ -41,7 +41,6 @@ Plain Text
 0 = Sin riesgo de obesidad
 
 # Arquitectura del Proyecto
-## Arquitectura del Proyecto
 
 ```text
 Datos
