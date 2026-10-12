@@ -1,0 +1,20 @@
+# Análisis de datos y modelado
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+
+# Seguimiento de experimentos y modelos
+mlflow
+
+# Orquestación de flujos
+prefect
+
+# API de inferencia
+fastapi
+uvicorn
+
+# Pruebas
+pytest
