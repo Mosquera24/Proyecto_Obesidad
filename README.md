@@ -44,16 +44,24 @@ Plain Text
 
 Datos
 |── Ingesta
+|
 |── EDA
+|
 |── Feature Engineering
+|
 |── Train/Test Split
+|
 |── Modelos ML
   |── Regresión Logística
   |── Random Forest
 |── MLflow
+|
 |── Prefect
+|
 |── FastAPI
+|
 |── Docker
+|
 |── Monitoreo
 
 # Tecnologías Utilizadas
